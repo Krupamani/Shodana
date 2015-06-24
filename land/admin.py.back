@@ -1,0 +1,14 @@
+from django.contrib import admin
+from land.models import * 
+
+# Register your models here.
+
+admin.site.register(Landtype)
+admin.site.register(Irrigationsource)
+admin.site.register(Irrigationflow)
+admin.site.register(Irrigationownship)
+admin.site.register(Aquireland)
+admin.site.register(Reasonforsale)
+admin.site.register(Currentownership)
+admin.site.register(Landsold)
+admin.site.register(Landbought)

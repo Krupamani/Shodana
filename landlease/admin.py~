@@ -1,0 +1,20 @@
+from django.contrib import admin
+
+# Register your models here.
+
+admin.site.register(Interlinks)
+admin.site.register(Tenantproblems)
+admin.site.register(Sharerentout)
+admin.site.register(Sharerentin)
+admin.site.register(Mortgagedout)
+admin.site.register(Mortgagedin)
+admin.site.register(Landleasedout)
+admin.site.register(Landleaser)
+admin.site.register(Landleasedin)
+admin.site.register(Landtanent)
+admin.site.register(Percent)
+admin.site.register(Period)
+admin.site.register(Kind)
+admin.site.register(Contracttype)
+admin.site.register(Contracttype)
+admin.site.register(Registration)

@@ -1,0 +1,10 @@
+land Landtype name:text
+land Irrigationsource name:text
+land Irrigationflow name:text
+land Irrigationownship name:text 
+land Aquireland name:text
+land Reasonforsale name:text
+land Currentownership household:f:Base household_number:int landtype:f:Landtype extent_of_owned:int irrigationsource:f:Irrigationsource irrigationflow:f:Irrigationflow irrigationownship:f:Irrigationownship value:int  patta_for_land:f:Yesorno how_aquireland:f:Aquireland
+land Landsold household:f:Base household_number:int year_of_sale:f:Year extent:int type_of_land:f:Landtype buyer_name:text buyer_catse:f:Caste buyer_occupation:f:Occupation buyer_place_residence:text price_land:int reason_for_sale:f:Reasonforsale
+land Landbought household:f:Base household_number:int year_of_purchase:f:Year extent:int type_of_land:f:Landtype seller_name:text seller_catse:f:Caste seller_occupation:f:Occupation seller_place_residence:text price_land:int comments:text
+

@@ -1,0 +1,225 @@
+# -*- coding: utf-8 -*-
+
+from django.db import models
+from household.models import *
+from land.models import *
+from landlease.models import *
+from cropping.models import *
+
+# Create your models here.
+class Agoperation(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Wagetype(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Workprogramme(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Obligationtype(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Taskdescription(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Collecteditems(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Magency(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Cheatingfaced(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Workdescription(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Animaltype(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Animalproduction(models.Model):
+	name = models.CharField(max_length=255)
+	def __str__(self):
+                return self.name
+
+class Labourdays(models.Model):
+	daily_labour_days_m = models.IntegerField()
+	exchange_labour_hours_m = models.IntegerField()
+	daily_labour_wages_c = models.IntegerField()
+	family_labour_days_m = models.IntegerField()
+	exchange_labour_hours_c = models.IntegerField()
+	family_labour_hours_w = models.IntegerField()
+	household = models.ForeignKey(Base)
+	daily_labour_hours_m = models.IntegerField()
+	daily_labour_wages_m = models.IntegerField()
+	crop = models.ForeignKey(Crop)
+	family_labour_hours_m = models.IntegerField()
+	daily_labour_wages_w = models.IntegerField()
+	daily_labour_hours_c = models.IntegerField()
+	daily_labour_days_w = models.IntegerField()
+	family_labour_hours_c = models.IntegerField()
+	family_labour_days_w = models.IntegerField()
+	longterm_labour_hours_c = models.IntegerField()
+	household_number = models.IntegerField()
+	longterm_labour_days_w = models.IntegerField()
+	longterm_labour_hours_m = models.IntegerField()
+	comments = models.CharField(max_length=255)
+	longterm_labour_days_m = models.IntegerField()
+	longterm_labour_hours_w = models.IntegerField()
+	longterm_labour_days_c = models.IntegerField()
+	family_labour_days_c = models.IntegerField()
+	exchange_labour_days_m = models.IntegerField()
+	machine_labourpayment = models.IntegerField()
+	daily_labour_hours_w = models.IntegerField()
+	daily_labour_days_c = models.IntegerField()
+	extent = models.IntegerField()
+	machine_labour_workhours = models.IntegerField()
+	exchange_labour_days_w = models.IntegerField()
+	agricultural_operation = models.ForeignKey(Agoperation, related_name = "agricultural_operation")
+	exchange_labour_hours_w = models.IntegerField()
+	piece_rated_kind = models.IntegerField()
+	exchange_labour_days_c = models.IntegerField()
+	piece_rated_cash = models.IntegerField()
+	def __str__(self):
+                return str(self.daily_labour_days_m)
+
+class Wages(models.Model):
+	labour_days = models.IntegerField()
+	contract_howmany_workers = models.IntegerField()
+	contract_remuniration = models.IntegerField()
+	household_number = models.IntegerField()
+	contract_total_wage = models.IntegerField()
+	contract_number_acres = models.IntegerField()
+	type_wage = models.ForeignKey(Wagetype, related_name = "type_wage")
+	wagerates_increased = models.ForeignKey(Yesorno, related_name = "wagerates_increased")
+	earnings_cash = models.IntegerField()
+	contract_wage_rate = models.IntegerField()
+	crop = models.ForeignKey(Crop)
+	work_hours = models.IntegerField()
+	place_work = models.CharField(max_length=255)
+	migrations_declined = models.ForeignKey(Yesorno, related_name = "migrations_declined")
+	worker_name = models.CharField(max_length=255)
+	isthere_change_peasants = models.ForeignKey(Yesorno, related_name = "isthere_change_peasants")
+	has_baragaining_power_increased = models.ForeignKey(Yesorno, related_name = "has_baragaining_power_increased")
+	operation = models.ForeignKey(Agoperation, related_name = "operation")
+	earnings_kind = models.ForeignKey(Kind, related_name = "earnings_kind")
+	household = models.ForeignKey(Base)
+	def __str__(self):
+                return self.worker_name
+
+class Nonaglabour(models.Model):
+	number_days = models.IntegerField()
+	type_wage_contract = models.ForeignKey(Wagetype, related_name = "type_wage_contract")
+	description_specify_programme = models.ForeignKey(Workprogramme, related_name = "description_specify_programme")
+	household_number = models.IntegerField()
+	household = models.ForeignKey(Base)
+	totalearnings_kind = models.ForeignKey(Kind, related_name = "totalearnings_kind")
+	place_work = models.CharField(max_length=255)
+	worker_name = models.CharField(max_length=255)
+	totalearnings_cash = models.IntegerField()
+	work_hours = models.IntegerField()
+	def __str__(self):
+                return self.worker_name
+
+class Empfreedom(models.Model):
+	does_unpaidlabour_service_text = models.CharField(max_length=255,verbose_name=u' కుటుంబంలో ఎవరైనా ఏ యజమనికైన ఉచితంగా కాని తకువ ప్రతిఫలానికి గాని పని చేస్తారా? పని చేస్త'ే )
+
+	household_obligated_castduties_two = models.CharField(max_length=255)
+	household_number = models.IntegerField()
+	are_familyfree_towork = models.ForeignKey(Yesorno, related_name = "are_familyfree_towork",verbose_name=u'మీకు ఇష్టం వచ్చిన యజమానికి కూలికి పోవటానికి  మీకు  స్వేచ్ఛ  ')
+	member_family_harassment = models.ForeignKey(Yesorno, related_name = "member_family_harassment")
+	household = models.ForeignKey(Base)
+	household_obligated_castduties_one = models.CharField(max_length=255)
+	does_unpaidlabour_service = models.ForeignKey(Yesorno, related_name = "does_unpaidlabour_service",verbose_name=u'మీ కుటుంబంలో ఎవరైనా ఏ యజమనికైన ఉచితంగా కాని తకువ ప్రతిఫలానికి గాని పని చేస్తారా? పని చేస్తే ')
+	are_familyfree_towork_text = models.CharField(max_length=255,verbose_name=u'మీకు ఇష్టం వచ్చిన యజమానికి కూలికి పోవటానికి  మీకు  స్వేచ్ఛ ')
+	member_family_forced_particularemployer = models.ForeignKey(Yesorno, related_name = "member_family_forced_particularemployer",verbose_name=u'మీ కుటుంబంలో ఏ ఒక్కరైన ఒక ప్రత్యేక యజమానికి పని  చేసేలా నిర్భందించబడ్డార')
+	household_obligated_castduties_three = models.CharField(max_length=255)
+	any_murders_longtermlabours = models.ForeignKey(Yesorno, related_name = "any_murders_longtermlabours")
+	member_family_forced_indebted = models.ForeignKey(Yesorno, related_name = "member_family_forced_indebted",verbose_name=u'అప్పు  ఇచిన వారు నిర్భందించారా ?')
+	member_family_harassment =  models.ForeignKey(Yesorno, related_name = " member_family_harassment")
+	any_murders_longtermlabours =  models.ForeignKey(Yesorno, related_name = "any_murders_longtermlabours")
+	household_obligated_castduties_one = models.CharField(max_length=255)
+	household_obligated_castduties_two = models.CharField(max_length=255)	
+	household_obligated_castduties_three = models.CharField(max_length=255)
+	worker_name = models.CharField(max_length=255,verbose_name=u'కార్మికుడి పేరు ')
+	employer_name = models.CharField(max_length=255,verbose_name= u 'యాజమాని ి పేరు  ')
+	employer_caste =  models.ForeignKey(Caste, related_name = "employer_caste" ,verbose_name= u 'యాజమాని కులం ')
+	employer_landowned = models.IntegerField(,verbose_name= u ' యాజమాని  భూమి ')
+	type_obligation = models.ForeignKey(Obligationtype, related_name = "type_obligation",verbose_name=u'ఎలాంటి వత్తిడికి గురయ్యారు')
+	description_task = models.ForeignKey(Taskdescription, related_name= "description_task",verbose_name=u'పని వివరము ')
+	labourdays_worked =  models.IntegerField(,verbose_name= u 'సంవత్సరానికి పనిచేసే రోజులు ')
+	hours_work =  models.IntegerField(,verbose_name= u 'ఎన్ని గంటలు ')
+	work_payment =  models.IntegerField(,verbose_name= u 'ఇచ్చిన ప్రతిఫలం ')
+	comments =  models.CharField(max_length=255,verbose_name=u'వాఖ్యనం ') 
+	def __str__(self):
+                return str(self.household_number)
+
+class Income(models.Model):
+	where_sold = models.CharField(max_length=255)
+	quantity_sold = models.IntegerField()
+	household = models.ForeignKey(Base)
+	marketing_agency = models.ForeignKey(Magency, related_name = "marketing_agency")
+	price = models.IntegerField()
+	cheating_youface = models.ForeignKey(Cheatingfaced, related_name = "cheating_youface")
+	total_earnings = models.IntegerField()
+	item_collected = models.ForeignKey(Collecteditems, related_name = "item_collected")
+	quantity_consumed = models.IntegerField()
+	household_number = models.IntegerField()
+	def __str__(self):
+                return str(self.quantity_sold)
+
+class Incomeother(models.Model):
+	household_number = models.IntegerField()
+	work_description = models.ForeignKey(Workdescription, related_name = "work_description")
+	household = models.ForeignKey(Base)
+	comments = models.CharField(max_length=255)
+	worker_name = models.CharField(max_length=255)
+	work_place = models.CharField(max_length=255)
+	totalnet_earnings = models.IntegerField()
+	s_no = models.ForeignKey(Numbers)
+	def __str__(self):
+                return self.worker_name
+
+class Animalsource(models.Model):
+	insurance = models.IntegerField()
+	labour_charges = models.IntegerField()
+	household_number = models.IntegerField()
+	feed_purchased = models.IntegerField()
+	age = models.ForeignKey(Numbers, related_name = "age")
+	veternary_charges = models.IntegerField()
+	income_price = models.IntegerField()
+	rent_for_land = models.IntegerField()
+	nu = models.ForeignKey(Numbers, related_name = "nu")
+	total_income = models.IntegerField()
+	income_production = models.ForeignKey(Animalproduction, related_name = "income_production")
+	maintanence_buildings = models.IntegerField()
+	others = models.IntegerField()
+	interest_loans_livestock = models.IntegerField()
+	feed_home_grown = models.IntegerField()
+	total_present_value = models.IntegerField()
+	type = models.ForeignKey(Animaltype, related_name = "type")
+	household = models.ForeignKey(Base)
+	earnings = models.IntegerField()
+	def __str__(self):
+                return str(self.insurance)
+

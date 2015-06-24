@@ -1,0 +1,62 @@
+from django.db import models
+
+# Create your models here.
+class Village(models.Model):
+	name = models.CharField(max_length=255)
+class Mandal(models.Model):
+	name = models.CharField(max_length=255)
+class District(models.Model):
+	name = models.CharField(max_length=255)
+class Sex(models.Model):
+	name = models.CharField(max_length=255)
+class Caste(models.Model):
+	name = models.CharField(max_length=255)
+class Year(models.Model):
+	name = models.CharField(max_length=255)
+class Religion(models.Model):
+	name = models.CharField(max_length=255)
+class Yesorno(models.Model):
+	name = models.CharField(max_length=255)
+class Numbers(models.Model):
+	name = models.IntegerField()
+class Relationship(models.Model):
+	name = models.CharField(max_length=255)
+class Maritalstatus(models.Model):
+	name = models.CharField(max_length=255)
+class Literarystatus(models.Model):
+	name = models.CharField(max_length=255)
+class Educationlevel(models.Model):
+	name = models.CharField(max_length=255)
+class Occupation(models.Model):
+	name = models.CharField(max_length=255)
+
+class Base(models.Model):
+	name_of_household = models.CharField(max_length=255)
+	household_number = models.IntegerField()
+	district = models.ForeignKey(District)
+	phone = models.CharField(max_length=255)
+	age = models.ForeignKey(Numbers)
+	address = models.CharField(max_length=255)
+	father_occupation = models.ForeignKey(Occupation)
+	tehisil_of_birth = models.CharField(max_length=255)
+	sex = models.ForeignKey(Sex)
+	religion = models.ForeignKey(Religion)
+	scorst = models.ForeignKey(Yesorno)
+	father_name = models.CharField(max_length=255)
+	village = models.ForeignKey(Village)
+	year_migration = models.ForeignKey(Year)
+	mandal = models.ForeignKey(Mandal)
+	caste = models.ForeignKey(Caste)
+class Hhmembers(models.Model):
+	name_location_institute = models.CharField(max_length=255)
+	household_number = models.IntegerField()
+	occupations = models.ForeignKey(Occupation)
+	age = models.ForeignKey(Numbers)
+	place_of_work = models.CharField(max_length=255)
+	sex = models.ForeignKey(Sex)
+	marital_status = models.ForeignKey(Maritalstatus)
+	education_level = models.ForeignKey(Educationlevel)
+	relationship_to_head = models.ForeignKey(Relationship)
+	literary_status = models.ForeignKey(Literarystatus)
+	household = models.ForeignKey(Base)
+	name = models.CharField(max_length=255)

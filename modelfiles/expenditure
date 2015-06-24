@@ -1,0 +1,14 @@
+expenditure Class name:text
+
+expenditure Expmonthly household:f:Base household_number:int food_rice_ration:int food_rice_outside:int food_rice_price:int food_wheat_ration:int food_wheat_outside:int food_wheat_price:int food_sugar_ration:int food_sugar_outside:int food_sugar_price:int food_kerosene_ration:int food_kerosene_outside:int food_kerosene_price:int food_pulse_ration:int food_pulse_outside:int food_pulse_price:int food_oil_ration:int food_oil_outside:int food_oil_price:int food_spices_ration:int food_spices_outside:int food_spices_price:int food_milk_ration:int food_milk_outside:int food_milk_price:int food_vegtbles_ration:int food_vegtbles_outside:int food_vegtbles_price:int food_meat_ration:int food_meat_outside:int food_meat_price:int food_eggs_ration:int food_eggs_outside:int food_eggs_price:int cloths_per_year:int soaps_paste_peryear:int socialcustoms_marriages:int socialcustoms_festivals:int socialcustoms_funerals:int socialcustoms_templefairs:int socialcustoms_onifunctions:int socialcustoms_childnaming:int socialcustoms_birthday:int entertainment_movies:int entertainment_tours:int entertainment_liquor:int entertainment_smoking:int entertainment_playcards:int entertainment_cockfights:int meat_noofdays:int eggs_noofdays:int pappu_noofdays:int kuralu_noofdays:int pachhadi_noofdays:int karam_noofdays:int milk_noofdays:int curds_noofdays:int buttermilk_noofdays:int rice_noofdays:int nookalasankati_noofdays:int roti_noofdays:int sweetmeat_noofdays:int family_withoutfood_noofdays:int 
+
+expenditure Expeducation household:f:Base household_number:int child_name:text age:f:Numbers class:f:Class govt_or_private:text school_fee:int tuition_fee:int books_fee:int travel_expenses:int total_expenses:int
+
+expenditure Exphealth household:f:Base household_number:int name_familymember:text illness:text govt_or_private:text cost_of_treatment:int expendutre_morgaging_selling_land:f:Yesorno expendutre_morgaging_selling_gold:f:Yesorno expendutre_loan_landlord:f:Yesorno others:text
+
+expenditure Migration household:f:Base household_number:int s_no:f:Numbers name_migrant:text in_migration:date out_migration:date shortterm_from:date shortterm_to:date longterm_from:date longterm_to:date destination_village:text destination_town:text destination_country:text reason_migration:text 
+
+expenditure Remittances household:f:Base household_number:int annual_inflow:int sufficient_meet_needs:f:yesorno using_this_amount:text haveyou_bought_assets:text
+
+expenditure Invistigators household:f:Base household_number:int comments_observations:text name_of_invistigator:text date_of_interview:date time_taken_for_interview:int data_entry_by:text date_data_entry:date is_furtherinv_needed:f:Yesorno
+

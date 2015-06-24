@@ -1,0 +1,51 @@
+from django.db import models
+from household.models import * 
+
+# Create your models here.
+class Landtype(models.Model):
+	name = models.CharField(max_length=255)
+class Irrigationsource(models.Model):
+	name = models.CharField(max_length=255)
+class Irrigationflow(models.Model):
+	name = models.CharField(max_length=255)
+class Irrigationownship(models.Model):
+	name = models.CharField(max_length=255)
+class Aquireland(models.Model):
+	name = models.CharField(max_length=255)
+class Reasonforsale(models.Model):
+	name = models.CharField(max_length=255)
+class Currentownership(models.Model):
+	household_number = models.IntegerField()
+	irrigationownship = models.ForeignKey(Irrigationownship)
+	household = models.ForeignKey(Base)
+	how_aquireland = models.ForeignKey(Aquireland)
+	extent_of_owned = models.IntegerField()
+	value = models.IntegerField()
+	patta_for_land = models.ForeignKey(Yesorno)
+	landtype = models.ForeignKey(Landtype)
+	irrigationflow = models.ForeignKey(Irrigationflow)
+	irrigationsource = models.ForeignKey(Irrigationsource)
+class Landsold(models.Model):
+	buyer_name = models.CharField(max_length=255)
+	household_number = models.IntegerField()
+	price_land = models.IntegerField()
+	type_of_land = models.ForeignKey(Landtype)
+	year_of_sale = models.ForeignKey(Year)
+	household = models.ForeignKey(Base)
+	buyer_occupation = models.ForeignKey(Occupation)
+	buyer_place_residence = models.CharField(max_length=255)
+	buyer_catse = models.ForeignKey(Caste)
+	extent = models.IntegerField()
+	reason_for_sale = models.ForeignKey(Reasonforsale)
+class Landbought(models.Model):
+	seller_catse = models.ForeignKey(Caste)
+	seller_occupation = models.ForeignKey(Occupation)
+	household_number = models.IntegerField()
+	seller_name = models.CharField(max_length=255)
+	price_land = models.IntegerField()
+	type_of_land = models.ForeignKey(Landtype)
+	household = models.ForeignKey(Household)
+	comments = models.CharField(max_length=255)
+	extent = models.IntegerField()
+	seller_place_residence = models.CharField(max_length=255)
+	year_of_purchase = models.ForeignKey(Year)

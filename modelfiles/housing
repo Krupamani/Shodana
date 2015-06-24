@@ -1,0 +1,46 @@
+housing Ownedorrented name:text
+
+housing Cardcolor name:text
+
+housing Cardtype name:text
+
+housing Rooftype name:text
+
+housing Walltype name:text
+
+housing Floortype name:text
+
+housing Latrinetype name:text
+
+housing Electricitytype name:text
+
+housing Sourcecooking name:text
+
+housing Naturereimbusment name:text
+
+housing Interesttype name:text
+
+housing Borrowingsource name:text
+
+
+housing Houbase household:f:Base household_number:int s_no:f:Numbers owned_or_rented:f:Ownedorrented year_construction:f:Year year_recent_repair:f:Year 
+isthere_veranda:f:Yesorno isthere_kitchen:f:Yesorno noof_additional_rooms:f:Numbers type_roof:f:Rooftype type_wall:f:Walltype type_of_floor:f:Floortype
+latrine:f:Latrinetype electricity:f:Electricitytype source_energy_cooking:f:Sourcecooking govtscheme_yes_or_no:f:Yesorno govtscheme_year:f:Year govtscheme_nature_reimbusment:f:Naturereimbusment govtscheme_cash:int value_of_house:int enough_water_text:text availbility_safe_drinking_text:text
+does_house_have_watertap:f:Yesorno amount_spending_water:int comments:text
+
+
+housing Indebtedness household:f:Base household_number:int loan_no::f:Numbers month_year:date principal:int collateral:int thing_indebtedness:text type_interest:f:Interesttype rate_interest:int amount_outstanding_principal:int amount_outstanding_interest:int amount_outstanding_total:int amont_repaid:int source_borrowing:f:Borrowingsource purpose_borrowing:text
+
+
+housing Selfhelpgroups household:f:Base household_number:int name_member:text name_group:text name_group_leader:text bank_group_linked:text period_member:f:Period number_members_group:f:Numbers savings_perweek:int savings_permonth:int savings_total:int 
+
+
+housing Assets household:f:Base household_number:int agricultural_land_area:int agricultural_land_value:int homestead_land_area:int homestead_land_value:int
+anyother_land_area:int anyother_land_value:int ponds_tanks_area:int ponds_tanks_value:int buildings_house_no:f:Numbers buildings_house_value:int buildings_cattleshed_no:f:Numbers buildings_cattleshed_value:int buildings_shop_no:f:Numbers buildings_shop_value:int buildings_anyother_no:f:Numbers buildings_anyother_value:int transport_bicycle_no:f:Numbers transport_bicycle_value:int transport_moped_no:f:Numbers transport_moped_value:int transport_scooter_no:f:Numbers transport_scooter_value:int transport_car_no:f:Numbers transport_car_value:int transport_bullockcart_no:f:Numbers transport_bullockcart_value:int transport_tractor_no:f:Numbers transport_tractor_value:int transport_lorry_no:f:Numbers transport_lorry_value:int transport_bus_no:f:Numbers transport_bus_value:int transport_other_no:f:Numbers transport_other_value:int investments_bonds_no:f:Numbers investments_bonds_value:int
+investments_chitfunds_no:f:Numbers investments_chitfunds_value:int investments_gold_no:f:Numbers investments_gold_value:int electronics_refrigerator_no:f:Numbers
+electronics_refrigerator_value:int electronics_ac_no:f:Numbers electronics_ac_value:int electronics_colortv_no:f:Numbers electronics_colortv_value:int electronics_mobile_no:f:Numbers electronics_mobile_value:int electronics_telephone_no:f:Numbers electronics_telephone_value:int electronics_fan_no:f:Numbers
+electronics_fan_value:int electronics_cable_no:f:Numbers electronics_cable_value:int electronics_dish_no:f:Numbers electronics_dish_value:int electronics_washingmachine_no:f:Numbers electronics_washingmachine_value:int electronics_grinder_no:f:Numbers electronics_grinder_value:int electronics_mixy_no:f:Numbers electronics_mixy_value:int durables_tailoringmachine_no:f:Numbers durables_tailoringmachine_value:int durables_wwatch_no:f:Numbers
+durables_wwatch_value:int durables_gasstove_no:f:Numbers durables_gasstove_value:int durables_biogas_no:f:Numbers durables_biogas_value:int durables_handpump_no:f:Numbers durables_handpump_value:int durables_kitchenset_no:f:Numbers durables_kitchenset_value:int woman_land_patta:f:Yesorno woman_land_patta_text:text
+
+housing Govtdistrib household:f:Base household_number:int rationcard_exist:f:Yesorno card_type:f:Cardtype card_color:f:Cardcolor number_registered:f:Numbers number_registered_adults number_registered_kids:f:Numbers reasons_for_nocard:text comments: text ration_available_intime:f:Yesorno ration_available_sufficient:f:Yesorno ration_reasonable_price:f:Yesorno ration_weights_perfect:f:Yesorno ration_buy_onetime:f:Yesorno ration_buy_multipletimes_accept:f:Yesorno 
+

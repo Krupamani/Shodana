@@ -1,0 +1,37 @@
+cropping Crop name:text
+
+cropping Otheractivities name:text
+
+cropping Tenurialstatus name:text 
+
+cropping Marketingplace name:text
+
+cropping Transportmode name:text
+
+cropping Fertilisertype name:text
+
+cropping Itemcode name:text
+
+cropping Tubewelltype name:text
+
+cropping Businessactivities name:text
+
+cropping Tasksperformed name:text
+
+cropping Time name:text
+
+cropping Productionsales household:f:Base household_number:int s_no:f:Numbers crop:f:Crop tenurial_status:f:Tenurialstatus extent:int month_sowing:date month_harvesting:date source_irrigation:f:Irrigationsource production_grain:int production_straw:int household_consumpion_grain:int household_consumption_straw:int sale_month_disposal:date sale_quantity:int sale_price:int sale_where_marketed:f:Marketingplace sale_marketing_agency:int sale_transport_mode:f:Transportmode sale_transport_cost:int sale_other_marketing_costs:int sale_wasthe_price_fixedbefore:f:Yesorno sale_by_products_amt:int sale_by_products_price:int income_oncrop:int income_on_products:int total_income:int market_expense:int net_income:int 
+
+cropping Inputs household:f:Base household_number:int s_no:f:Numbers crop:f:Crop manure_home_qty:int manure_home_value:int manure_home_cost:int manure_purchased_qty:int manure_purchased_price:int manure_purchased_cost:int manure_transport_mode:f:Transportmode manure_transport_costincurred:int fertiliser_type:f:Fertilisertype fertiliser_qty:int fertiliser_price:int fertiliser_cost:int fertiliser_transport_mode:f:Transportmode fertiliser_transport_costincurred: int seeds_home_qty:int seeds_home_value:int seeds_home_cost:int seeds_purchased_qty:int seeds_purchased_price:int seeds_purchased_cost:int plant_protection_value:int irrigation_charges_source:f:Irrigationsource irrigation_charges_price:int irrigation_charges_totalcost:int advice_regarding_cultivation:text 
+
+cropping Specifiedproduction household:f:Base household_number:int itemcode:f:Itemcode ownership_number:f:Numbers ownership_yearpurchase:f:Year ownership_pricepaid_perunit:int ownership_subsidy_received:int ownership_presentvalue:int maintenance_charges_lastyear:int rental_earnings_units:int rental_earnings:int total_earnings:int comments:text 
+
+cropping Tubewells household:f:Base household_number:int s_no:f:Numbers year_installed:f:Year depth_installed:int depth_present:int type:f:Tubewelltype cost_installation:int maintanence_last_year:int operated_other_crop:f:Crop operated_other_sale_area:int operated_other_sale_totalrevenue:int total_earnings:int comments:text
+
+cropping Othercosts household:f:Base household_number:int item_code:f:Itemcode amount_spent:int comments:text
+
+cropping Managerpayments household:f:Base household_number:int employ_manager_lastyear:f:Yesorno employ_longterm_lastyear:f:Yesorno name_worker:text caste:f:Caste since_when:date number_months:int payments_incash:int payments_inkind:text payments_total:int comments:text
+
+cropping Longtermworker household:f:Base household_number:int name_worker:text name_manager:text caste_worker:f:Caste occupation_manager:f:Occupation caste_manager:f:Caste land_owned:int land_leasedin_mortin:int land_leasedout_mortout:int other_business_activities:f:Otheractivities tasks_performed_one:f:Tasksperformed tasks_performed_two:f:Tasksperformed tasks_performed_three:f:Tasksperformed number_months:int earning_cash:int earning_kind:int total:int get_number_days_off:f:Numbers working_from:f:Time working_to:f:Time illness_get_help:f:Yesorno illness_get_help_text:text subjected_harassments:f:Yesorno subjectd_harassments_describe:text 
+
+

@@ -1,0 +1,43 @@
+labourwages Agoperation name:text
+
+labourwages Wagetype name:text
+
+labourwages Workprogramme name:text
+
+labourwages Obligationtype name:text
+
+labourwages Taskdescription name:text
+
+labourwages Collecteditems name:text
+
+labourwages Magency name:text
+
+labourwages Cheatingfaced name:text
+
+labourwages Workdescription name:text
+
+labourwages Animaltype name:text
+
+labourwages Animalproduction name:text
+
+labourwages Labourdays household:f:Base household_number:int crop:f:Crop extent:int agricultural_operation:f:Agoperation family_labour_days_m:int family_labour_days_w:int family_labour_days_c:int family_labour_hours_m:int family_labour_hours_w:int family_labour_hours_c:int daily_labour_days_m:int daily_labour_days_w:int daily_labour_days_c:int daily_labour_hours_m:int daily_labour_hours_w:int daily_labour_hours_c:int daily_labour_wages_m:int daily_labour_wages_w:int daily_labour_wages_c:int exchange_labour_days_m:int exchange_labour_days_w:int exchange_labour_days_c:int exchange_labour_hours_m:int exchange_labour_hours_w:int exchange_labour_hours_c:int longterm_labour_days_m:int longterm_labour_days_w:int longterm_labour_days_c:int longterm_labour_hours_m:int longterm_labour_hours_w:int longterm_labour_hours_c:int piece_rated_cash:int piece_rated_kind:int machine_labour_workhours:f:int machine_labourpayment:int comments:text 
+
+labourwages Wages household:f:Base household_number:int worker_name crop:f:Crop operation:f:Agoperation type_wage:f:Wagetype place_work:text labour_days:int
+work_hours:int earnings_cash:int earnings_kind:f:Kind contract_number_acres:int contract_remuniration:int contract_howmany_workers:int contract_wage_rate:int contract_total_wage:int wagerates_increased:f:Yesorno migrations_declined:f:Yesorno isthere_change_peasants:f:Yesorno has_baragaining_power_increased:f:Yesorno 
+
+labourwages Nonaglabour household:f:Base household_number:int worker_name:text description_specify_programme:f:Workprogramme place_work:text 
+number_days:int work_hours:int type_wage_contract:f:Wagetype totalearnings_cash:int totalearnings_kind:f:Kind
+
+labourwages Empfreedom household:f:Base household_number:int are_familyfree_towork:f:Yesorno are_familyfree_towork_text:text does_unpaidlabour_service:f:Yesorno
+does_unpaidlabour_service_text:text member_family_forced_particularemployer:f:Yesorno member_family_forced_indebted::f:Yesorno member_family_harassment:f:Yesorno
+any_murders_longtermlabours:f:Yesorno household_obligated_castduties_one:text household_obligated_castduties_two:text household_obligated_castduties_three:text
+worker_name:text employer_name:text employer_caste:f:Caste employer_landowned:int type_obligation:f:Obligationtype description_task:f:Taskdescription labourdays_worked:int hours_work:int work_payment:int comments:text 
+
+
+labourwages Income household:f:Base household_number:int item_collected:f:Collecteditems quantity_consumed:int quantity_sold:int price:int total_earnings:int
+where_sold:text marketing_agency:f:Magency cheating_youface:f:cheatingfaced 
+
+labourwages Incomeother household:f:Base household_number:int s_no:f:Numbers worker_name:text work_description:f:Workdescription work_place:text totalnet_earnings:int comments:text 
+
+labourwages Animalsource household:f:Base household_number:int type:f:Animaltype nu:f:Numbers total_present_value:int age:f:Numbers feed_home_grown:int feed_purchased:int veternary_charges:int rent_for_land:int maintanence_buildings:int insurance:int interest-loans_livestock:int labour_charges:int others:int income_production:f:Animalproduction income_price:int total_income:int earnings:int 
+

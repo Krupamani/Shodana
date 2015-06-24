@@ -1,0 +1,11 @@
+.project
+dist
+django_admin_sortable.egg-info
+.pydevproject
+*.pyc
+*.pyo
+.idea
+atlassian-*
+*.sublime-*
+.ropeproject
+.codeintel

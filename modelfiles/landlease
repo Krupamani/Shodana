@@ -1,0 +1,31 @@
+landlease Registration name:text
+
+landlease Contracttype name:text
+
+landlease Kind name:text
+
+landlease Period name:text
+
+landlease Percent name:text
+
+landlease Landtanent household:f:Base household_number:int  fixedrent:int sharedrent:int total:int
+
+landlease Landleasedin household:f:Base household_number:int landtype:f:Landtype extent:int landowner_name:text landowner_caste:f:Caste landowner_occupation:f:Occupation landowner_extent_landholding:int tenurial_registration:f:Registration tenurial_contracttype:f:Contracttype tenurial_sincewhen:date annual_fixedrent_cash:int annual_fixedrent_kind:f:Kind loan_fromowner_interestfree:int loan_fromowner_withinterest:int furtherinterest_payment_rent:int qty_hay_byowner:int input_owner_manure:int input_owner_fertiliser:int input_owner_seed:int input_owner_pesticide:int input_owner_electricity:int input_owner_pumpset:int input_owner_machinary:int
+
+landlease Landleaser household:f:Base household_number:int  fixedrent:int sharedrent:int total:int
+
+landlease Landleasedout household:f:Base household_number:int landtype:f:Landtype extent:int landtenant_name:text landtenant_caste:f:Caste landtenant_occupation:f:Occupation landtenant_extent_landholding:int tenurial_registration:f:Registration tenurial_contracttype:f:Contracttype tenurial_sincewhen:date annual_fixedrent_cash:int annual_fixedrent_kind:f:Kind loan_fromyou_interestfree:int loan_fromyou_withinterest:int furtherinterest_payment_rent:int qty_hay_bytenant:int input_you_manure:int input_you_fertiliser:int input_you_seed:int input_you_pesticide:int input_you_electricity:int input_you_pumpset:int input_you_machinary:int
+
+landlease Mortgagedin household:f:Base household_number:int landtype:f:Landtype extent:int businessman_name:text businessman_caste:f:Caste businessman_occupation:f:Occupation year_mortgage:date mortgage_period:f:Period interest:int 
+
+landlease Mortgagedout household:f:Base household_number:int landtype:f:Landtype extent:int mortgagee_name:text mortgagee_caste:f:Caste mortgagee_occupation:f:Occupation year_mortgage:date mortgage_period:f:Period interest:int 
+
+landlease Sharerentin household:f:Base household_number:int landtype:f:Landtype extent:int landowner_name:text landowner_caste:f:Caste landowner_occupation:f:Occupation landowner_extent_hold:int registered_or_not:f:Registration period:f:Period since_when_leased:date owner_share_crop_percent:f:Percent owner_share_crop_qty:int  owner_share_hay_percent:f:Percent owner_share_hay_qty:int input_owner_manure_percent:f:Percent input_owner_manure_rs:int input_owner_fert_percent:f:Percent input_owner_fert_rs:int input_owner_seed_percent:f:Percent input_owner_seed_rs:int input_owner_pest_percent:f:Percent input_owner_pest_rs:int input_owner_elec_percent:f:Percent input_owner_elec_rs:int input_owner_pump_percent:f:Percent input_owner_pump_rs:int input_owner_machinary_percent:f:Percent input_owner_machinary_rs:int input_owner_labor_percent:f:Percent input_owner_labor_rs:int loan_by_owner_interestfree:int loan_by_owner_amt:int loan_by_owner_interest:int
+
+landlease Sharerentout household:f:Base household_number:int landtype:f:Landtype extent:int cropper_name:text cropper_caste:f:Caste  cropper_occupation:f:Occupation cropper_extent_hold:int registered_or_not:f:Registration period:f:Period since_when_leased:date tenant_share_crop_percent:f:Percent tenant_share_crop_qty:int  tenant_share_hay_percent:f:Percent tenant_share_hay_qty:int input_you_manure_percent:f:Percent input_you_manure_rs:int input_you_fert_percent:f:Percent input_you_fert_rs:int input_you_seed_percent:f:Percent input_you_seed_rs:int input_you_pest_percent:f:Percent input_you_pest_rs:int input_you_elec_percent:f:Percent input_you_elec_rs:int input_you_pump_percent:f:Percent input_you_pump_rs:int input_you_machinary_percent:f:Percent input_you_machinary_rs:int input_you_labor_percent:f:Percent input_you_labor_rs:int loan_by_you_interestfree:int loan_by_you_amt:int loan_by_you_interest:int
+
+landlease Tenantproblems household:f:Base household_number:int loan_landowner_prior_tenancy:f:Yesorno debt_inherited:f:Yesorno why_ownland_notsufficient:f:Yesorno why_opportunity_cattle:f:Yesorno why_for_foodgrains:f:Yesorno why_lowrent_profitable:f:Yesorno why_wageslow_manage:f:Yesorno why_tenancy_respectable:f:Yesorno why_inability_wagework:f:Yesorno why_noskill_urban:f:Yesorno dueto_lack_opportunites:f:Yesorno other_reasons:text because_debt_to_leaser:f:Yesorno because_debt_to_leaser_amt:int reason_compelled:f:Yesorno reason_compelled_one:text reason_compelled_two:text reason_compelled_three:text nature_contract_written:f:Yesorno nature_contract_verbal:f:Yesorno nonereason_tenant:f:Yesorno inherited_problems:f:Yesorno lack_anyother_option:f:Yesorno provide_freeservice_owner:f:Yesorno nota_comeout_otherreasons:f:Yesorno comments:text
+
+landlease Interlinks household:f:Base household_number:int inputs_labour inputs_commodity:f:Yesorno inputs_land:f:Yesorno inputs_loans:f:Yesornoloans_labour:f:Yesorno loans_commodity:f:Yesorno loans_land:f:Yesorno land_labour:f:Yesorno land_commodity:f:Yesorno comodity_labour:f:Yesorno 
+
+

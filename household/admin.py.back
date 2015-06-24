@@ -1,0 +1,24 @@
+from django.contrib import admin
+from household.models import * 
+# Register your models here.
+
+admin.site.register(Village)
+admin.site.register(Mandal)
+admin.site.register(District)
+admin.site.register(Sex)
+admin.site.register(Caste)
+admin.site.register(Occupation)
+admin.site.register(Year)
+admin.site.register(Religion)
+admin.site.register(Yesorno)
+admin.site.register(Numbers)
+admin.site.register(Relationship)
+admin.site.register(Maritalstatus)
+admin.site.register(Literarystatus)
+admin.site.register(Educationlevel)
+
+class BaseAdmin(admin.ModelAdmin):
+    fields = ('village','household_number','name_of_household')
+
+admin.site.register(Base, BaseAdmin)
+admin.site.register(Hhmembers)

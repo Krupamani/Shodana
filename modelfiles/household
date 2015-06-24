@@ -1,0 +1,17 @@
+household Village name:text
+household Mandal name:text
+household District name:text
+household Sex name:text
+household Caste name:text
+household Occupation name:text
+household Year name:text
+household Religion name:text
+household Yesorno name:text
+household Numbers name:int
+household Relationship name:text
+household Maritalstatus name:text
+household Literarystatus name:text
+household Educationlevel name:text
+household Base village:f:Village household_number:int name_of_household:text sex:f:Sex age:f:Numbers caste:f:Caste scorst:f:Yesorno religion:f:Religion tehisil_of_birth:text year_migration:f:Year father_name:text father_occupation:f:Occupation mandal:f:Mandal district:f:District address:text phone:text
+household Hhmembers household:f:Base household_number:int name:text sex:f:Sex age:f:numbers relationship_to_head:f:Relationship marital_status:f:Maritalstatus
+occupations:f:Occupation place_of_work:text literary_status:f:Literarystatus education_level:f:Educationlevel name_location_institute:text 

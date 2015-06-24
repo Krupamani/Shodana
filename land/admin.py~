@@ -1,0 +1,41 @@
+from django.contrib import admin
+from land.models import * 
+
+# Register your models here.
+
+class LandtypeAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Landtype,LandtypeAdmin)
+
+class IrrigationsourceAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Irrigationsource,IrrigationsourceAdmin)
+
+class IrrigationflowAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Irrigationflow,IrrigationflowAdmin)
+
+class IrrigationownshipAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Irrigationownship,IrrigationownshipAdmin)
+
+class AquirelandAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Aquireland,AquirelandAdmin)
+
+class ReasonforsaleAdmin(admin.ModelAdmin):
+	fields=('name',)
+admin.site.register(Reasonforsale,ReasonforsaleAdmin)
+
+class CurrentownershipAdmin(admin.ModelAdmin):
+	fields=('household','household_number','landtype','extent_of_owned','irrigationsource','irrigationflow','irrigationownship','value','','patta_for_land','how_aquireland',)
+admin.site.register(Currentownership,CurrentownershipAdmin)
+
+class LandsoldAdmin(admin.ModelAdmin):
+	fields=('household','household_number','year_of_sale','extent','type_of_land','buyer_name','buyer_catse','buyer_occupation','buyer_place_residence','price_land','reason_for_sale',)
+admin.site.register(Landsold,LandsoldAdmin)
+
+class LandboughtAdmin(admin.ModelAdmin):
+	fields=('household','household_number','year_of_purchase','extent','type_of_land','seller_name','seller_catse','seller_occupation','seller_place_residence','price_land','comments',)
+admin.site.register(Landbought,LandboughtAdmin)
+
